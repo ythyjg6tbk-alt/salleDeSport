@@ -225,6 +225,15 @@
 
   .cta-btn.ghost:hover { background: var(--iron-900); color: var(--bone-100); }
 
+  .cta-btn.disabled {
+    background: transparent;
+    border: 1px dashed rgba(239,231,216,0.3);
+    color: var(--stone-300);
+    cursor: default;
+    font-style: italic;
+    font-weight: 500;
+  }
+
   /* ---------- SECTION GENERIC ---------- */
 
   section { padding: 84px 0; }
@@ -943,7 +952,7 @@
         <div class="rune-divider"></div>
         <h2>Nos abonnements<br>classiques.</h2>
       </div>
-      <p>En complément de l'offre Fondateur, réservez dès maintenant la formule qui vous correspond. Ces abonnements seront actifs dès l'ouverture officielle du Domaine d'Asgaard, fin octobre.</p>
+      <p>Pour l'instant, seule l'offre Fondateur (240€ TTC pour 12 mois, 50 places) est ouverte à la pré-inscription. Voici les formules classiques qui seront proposées à partir de l'ouverture officielle du Domaine d'Asgaard, fin octobre.</p>
     </div>
     <div class="tarif-grid">
 
@@ -955,7 +964,7 @@
           <li>Idéal pour découvrir le Domaine d'Asgaard</li>
           <li>Aucun engagement</li>
         </ul>
-        <a href="mailto:killianschramm@gmail.com?subject=Pr%C3%A9-inscription%20Domaine%20d'Asgaard%20-%20Pass%20Day&body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20Pass%20Day%20(9%2C99%E2%82%AC).%0A%0ANom%20%3A%0AT%C3%A9l%C3%A9phone%20%3A" class="cta-btn ghost">Acheter</a>
+        <span class="cta-btn disabled">Disponible à l'ouverture</span>
       </div>
 
       <div class="tarif-plaque is-featured" id="mensuel">
@@ -966,7 +975,7 @@
           <li>Sans engagement longue durée</li>
           <li>Le tarif de référence du Domaine d'Asgaard</li>
         </ul>
-        <a href="mailto:killianschramm@gmail.com?subject=Pr%C3%A9-inscription%20Domaine%20d'Asgaard%20-%20Abonnement%20Mensuel&body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20abonnement%20Mensuel%20(24%2C99%E2%82%AC%2Fmois).%0A%0ANom%20%3A%0AT%C3%A9l%C3%A9phone%20%3A" class="cta-btn">S'abonner</a>
+        <span class="cta-btn disabled">Disponible à l'ouverture</span>
       </div>
 
       <div class="tarif-plaque" id="duo">
@@ -977,11 +986,11 @@
           <li>Idéal à deux, entre amis ou en famille</li>
           <li>Formule économique</li>
         </ul>
-        <a href="mailto:killianschramm@gmail.com?subject=Pr%C3%A9-inscription%20Domaine%20d'Asgaard%20-%20Abonnement%20Duo&body=Bonjour%2C%0A%0ANous%20souhaitons%20r%C3%A9server%20un%20abonnement%20Duo%20(45%E2%82%AC%2Fmois%2C%202%20personnes).%0A%0ANom%201%20%3A%0ANom%202%20%3A%0AT%C3%A9l%C3%A9phone%20%3A" class="cta-btn ghost">Choisir cette offre</a>
+        <span class="cta-btn disabled">Disponible à l'ouverture</span>
       </div>
 
     </div>
-    <p class="tarif-note">Paiement en ligne sécurisé bientôt disponible. En attendant, écrivez-nous ou appelez le <a href="tel:0664654393">06 64 65 43 93</a> pour réserver votre place — quelle que soit la formule choisie.</p>
+    <p class="tarif-note">Envie de réserver dès maintenant ? Seule l'offre Fondateur est disponible en pré-inscription : écrivez-nous ou appelez le <a href="tel:0664654393">06 64 65 43 93</a>.</p>
   </div>
 </section>
 
@@ -1041,8 +1050,8 @@
   <div class="wrap">
     <div class="reserve-card">
       <div>
-        <h2>50 places.<br>Et nos abonnements classiques.</h2>
-        <p>L'offre Fondateur est limitée aux 50 premiers abonnements : 240 € TTC pour 12 mois, l'abonnement commençant le jour de l'ouverture officielle du Domaine d'Asgaard. Nos abonnements classiques (Mensuel, Pass Day, Duo) sont également réservables dès maintenant. Dans l'attente de la mise en service du paiement sécurisé en ligne, toutes les inscriptions sont actuellement réalisées directement auprès de nous.</p>
+        <h2>50 places.<br>Une seule offre de lancement.</h2>
+        <p>L'offre Fondateur est limitée aux 50 premiers abonnements : 240 € TTC pour 12 mois, l'abonnement commençant le jour de l'ouverture officielle du Domaine d'Asgaard. Dans l'attente de la mise en service du paiement sécurisé en ligne, les inscriptions sont actuellement réalisées directement auprès de nous. Nos abonnements classiques (Mensuel, Pass Day, Duo) seront quant à eux proposés à partir de l'ouverture.</p>
       </div>
       <div class="reserve-contact">
         <div class="label">Téléphone</div>
@@ -1083,8 +1092,8 @@
         <div class="faq-a">Pendant la période de prévente, l'inscription est réalisée directement auprès du Domaine d'Asgaard, quelle que soit la formule choisie (Fondateur, Mensuel, Pass Day ou Duo). Contactez-nous par téléphone ou par email et nous vous transmettrons les modalités d'inscription et de règlement.</div>
       </details>
       <details class="faq-item">
-        <summary>Les abonnements Mensuel, Pass Day et Duo sont-ils disponibles en plus de l'offre Fondateur ?</summary>
-        <div class="faq-a">Oui. L'offre Fondateur (240 € pour 12 mois, 50 places) reste une formule de lancement limitée dans le temps. En parallèle, vous pouvez d'ores et déjà réserver un abonnement Mensuel (24,99 €/mois), un Pass Day (9,99 €) ou une formule Duo (45 €/mois, pour 2 personnes) : ces formules seront actives dès l'ouverture de la salle.</div>
+        <summary>Les abonnements Mensuel, Pass Day et Duo sont-ils disponibles dès maintenant ?</summary>
+        <div class="faq-a">Pas encore. Pour l'instant, seule l'offre Fondateur (240 € pour 12 mois, 50 places) est ouverte à la pré-inscription. Les abonnements Mensuel (24,99 €/mois), Pass Day (9,99 €) et Duo (45 €/mois, pour 2 personnes) seront proposés à partir de l'ouverture officielle de la salle, fin octobre.</div>
       </details>
       <details class="faq-item">
         <summary>Comment fonctionne le Pass Day ?</summary>
