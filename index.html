@@ -1,186 +1,591 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Salle de Sport</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  </head>
-  <body>
-    <!-- banner -->
-    <div class="block banner">
-      
-      <!-- header -->
-      <header class="headerNormal">
-        
-        <div class="logo">
-          <img src="images/logo.png">
-        </div>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-        <!-- menu normal -->
-        <nav class="nav">
-          <a href="#abonnement">Abonnement</a>
-          <a href="#lesSalles">Les Salles</a>
-          <a href="Blog">Blog</a>
-          <a href="">S'inscrire</a>
-        </nav>
-        <!-- menu normal -->
+  <title>ASGAARD — Salle de Sport &amp; Musculation à Aubusson (Creuse) | Fitness, Cross-Training</title>
+  <meta name="description" content="ASGAARD, salle de sport premium à Aubusson en Creuse : musculation, cardio, cross-training, cages d'entraînement. Abonnement dès 24,99€/mois, Pass Day à 9,99€, formule Duo à 45€/mois. Accessible dès 16 ans, tous niveaux.">
+  <meta name="keywords" content="salle de sport Aubusson, musculation Aubusson, fitness Aubusson, salle de sport Creuse, musculation Creuse, salle de sport 23, ASGAARD">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.asgaard-aubusson.fr/">
+  <!-- TODO : remplacer par le nom de domaine définitif d'ASGAARD -->
 
-      </header>
-      <!-- header -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="ASGAARD">
+  <meta property="og:title" content="ASGAARD — Salle de Sport &amp; Musculation à Aubusson (Creuse)">
+  <meta property="og:description" content="Musculation, cardio, cross-training et renforcement dans une salle premium à Aubusson. Abonnement 24,99€/mois, Pass Day 9,99€, formule Duo 45€/mois.">
+  <meta property="og:image" content="images/main.jpg">
+  <meta property="og:url" content="https://www.asgaard-aubusson.fr/">
+  <meta name="twitter:card" content="summary_large_image">
 
-      <!-- main title -->
-      <div class="mainTitleBox containerBox">
-        <button class="button is-info is-outlined is-large">Trouvez une Salle</button>
-        <h1 class="title is-2">Gagnez en forme, gagnez du temps...</h1>
+  <link rel="icon" href="images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+
+  <!-- Données structurées : établissement sportif local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "ASGAARD",
+    "image": "images/main.jpg",
+    "description": "Salle de sport et musculation premium à Aubusson, en Creuse : fitness, cardio, cross-training, renforcement musculaire, espace poids libres, machines guidées et cages d'entraînement.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aubusson",
+      "addressRegion": "Creuse",
+      "postalCode": "23200",
+      "addressCountry": "FR"
+    },
+    "areaServed": "Aubusson, Creuse",
+    "priceRange": "9,99€ - 45€",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================= HEADER ============================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#accueil" class="brand">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 2 L44 14 V34 L24 46 L4 34 V14 Z" stroke="#2f8dff" stroke-width="2.5"/>
+          <path d="M24 12 L24 46 M14 20 L34 32 M34 20 L14 32" stroke="#f6f4f1" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <strong>ASGAARD</strong><span class="dot">.</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <a href="#la-salle">La Salle</a>
+        <a href="#equipements">Équipements</a>
+        <a href="#abonnements">Tarifs</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#localisation">Aubusson</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#abonnements" class="btn btn-primary nav-cta">S'abonner</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#abonnements" class="btn btn-primary btn-sm header-cta">S'abonner</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="bar"></span>
+        </button>
       </div>
-      <!-- main title -->
-
     </div>
-    <!-- banner -->
+  </header>
 
-    <!-- section abonnement -->
-    <section id="abonnement" class="block">
-      <div class="containerBox">
-        <div class="columns">
+  <!-- ============================= HERO ============================= -->
+  <section class="hero" id="accueil">
+    <div class="hero-media">
+      <img src="images/main.jpg" alt="Athlète soulevant une barre de musculation dans une salle de sport à l'ambiance industrielle" loading="eager" fetchpriority="high">
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Salle de sport premium — Aubusson, Creuse</p>
+      <h1 class="hero-title">ASGAARD</h1>
+      <p class="hero-tagline">La force. La discipline. La communauté.</p>
+      <p class="hero-text">Musculation, cardio, cross-training et renforcement musculaire dans un espace industriel &amp; scandinave pensé pour tous les niveaux, dès 16 ans, en plein cœur d'Aubusson.</p>
+      <div class="hero-cta">
+        <a href="#abonnements" class="btn btn-primary">Découvrir nos tarifs</a>
+        <a href="#abonnements" class="btn btn-outline" data-open-modal data-plan="passday" data-plan-name="Pass Day" data-plan-price="9,99 €" data-plan-period="/ jour">Réserver un Pass Day</a>
+      </div>
+      <div class="hero-chips">
+        <span class="hero-chip"><i class="fa fa-user-check" aria-hidden="true"></i>Dès 16 ans</span>
+        <span class="hero-chip"><i class="fa fa-dumbbell" aria-hidden="true"></i>Tous niveaux</span>
+        <span class="hero-chip"><i class="fa fa-map-marker-alt" aria-hidden="true"></i>Aubusson, Creuse</span>
+        <span class="hero-chip"><i class="fa fa-industry" aria-hidden="true"></i>Ambiance industrielle &amp; scandinave</span>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+  </section>
 
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">Formule<br>Flex</h3>
-              <p><span class="content is-large">28,99€</span><i> par mois</i></p>
-              <button class="button is-primary is-outlined is-medium">Je choisis flex</button>
-              <p>Flexible : résiliez quand vous voulez</p>
-              <p>Paiement mensuel</p>
-              <p>Frais d’inscription de 29,99€</p>
-              <p>Résiliable mensuellement dès le 1er mois</p>
-            </div>
+  <!-- ============================= LA SALLE ============================= -->
+  <section class="section" id="la-salle">
+    <div class="container la-salle-grid">
+      <div data-reveal>
+        <p class="eyebrow">La salle</p>
+        <h2 class="section-title">Bienvenue chez <span class="hl">ASGAARD</span></h2>
+        <p class="section-lede">ASGAARD est une salle de musculation et de fitness moderne, premium mais accessible, pensée pour la communauté sportive d'Aubusson et de la Creuse. Bois, métal et univers nordique : une ambiance forte, pour un entraînement sérieux.</p>
+
+        <ul class="feature-list">
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i>Ambiance industrielle &amp; scandinave, bois et métal</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i>Espace poids libres, machines guidées et cages d'entraînement</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i>Zones cardio, cross-training et renforcement musculaire</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i>Accessible dès 16 ans, pour tous les niveaux</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i>Une image sportive, moderne, masculine et féminine</li>
+        </ul>
+
+        <div class="info-strip">
+          <div class="info-block">
+            <h4>Horaires</h4>
+            <p>Lun – Ven : 6h00 – 22h00<br>Sam – Dim : 8h00 – 20h00</p>
+            <span class="info-note">Horaires indicatifs — à confirmer avec la salle</span>
           </div>
-
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">Formule<br>Smart</h3>
-              <p><span class="content is-large">19,99€</span><i> par mois</i></p>
-              <button class="button is-primary is-outlined is-medium">Je choisis smart</button>
-              <p>Gratuit jusqu'au 1er Juin !</p>
-              <p>Paiement mensuel ou à l’année</p>
-              <p>Frais d'inscription de 19,99€</p>
-              <p>Après 12 mois, résiliable mensuellement !</p>
-            </div>
+          <div class="info-block">
+            <h4>Adresse</h4>
+            <p>ASGAARD Fitness<br>Aubusson, 23200 — Creuse</p>
+            <a href="#localisation" class="info-note link-underline">Voir l'itinéraire →</a>
           </div>
-
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">Formule<br>Duo</h3>
-              <p><span class="content is-large">29,99€</span><i> par mois</i></p>
-              <button class="button is-primary is-outlined is-medium">Je choisis duo</button>
-              <p>Gratuit jusqu'au 1er Juin !</p>
-              <p>Invitez gratuitement quelqu'un à venir vous entraîner avec vous</p>
-              <p>Paiement mensuel</p>
-              <p>Frais d’inscription de 19,99€</p>
-              <p>Après 12 mois, résiliable mensuellement</p>
-            </div>
-          </div>
-
         </div>
       </div>
-    </section>
-    <!-- section abonnement -->
 
-    <!-- section les salles -->
-    <section id="lesSalles" class="block">
-      <div class="containerBox">
-        <h2 class="title is-3">Les Salles</h2>
-        <div class="columns">
+      <div class="toned-photo la-salle-photo" data-reveal>
+        <img src="images/fitness5.jpg" alt="Entraînement cardio chez ASGAARD, salle de sport à Aubusson" loading="lazy">
+      </div>
+    </div>
+  </section>
 
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">02 Aisnes</h3>
-              <a href="">SAINT-QUENTIN Victor Hugo</a><br>
-              <a href="">SOISSONS Avenue Salvador Allende</a>
-            </div>
-          </div>
-      
-          
-          <div class="column">
-            <div class="box">
-              <h3 title="is-4">10 Aube</h3>
-              <a href="">BARBEREY-SAINT-SULPICE Route Departementale 619</a><br>
-              <a href="">SAINT-JULIEN-LES-VILLAS Bd de Dijon</a><br>
-              <a href="">SAINT-ETIENNE Rue des Martyrs de Vingre</a>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">11 Aude</h3>
-              <a href="">CARCASSONNE rue Pierre Campas</a>
-            </div>
-          </div>
+  <!-- ============================= EQUIPEMENTS ============================= -->
+  <section class="section section-alt" id="equipements">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <p class="eyebrow" style="justify-content:center">Nos équipements</p>
+        <h2 class="section-title">Tout pour progresser, <span class="hl">au même endroit</span></h2>
+        <p class="section-lede">Un plateau complet de musculation et de fitness à Aubusson, conçu pour les débutants comme pour les sportifs confirmés.</p>
+      </div>
 
+      <div class="equip-grid">
+        <div class="equip-card" data-reveal>
+          <div class="equip-icon"><i class="fa fa-dumbbell" aria-hidden="true"></i></div>
+          <h3>Espace poids libres</h3>
+          <p>Haltères, barres olympiques et plateformes pour développer force et puissance.</p>
         </div>
-
-        <div class="columns">
-
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">13 Bouches-du-Rhône</h3>
-              <a href="">AVENUE GUILLAUME DU VAIR Aix-En-Provence Avenue Guillaume du Vair</a><br>
-              <a href="">MARSEILLE Avenue des Olives</a><br>
-              <a href="">MARSEILLE Boulevard de Saint-Marcel</a><br>
-              <a href="">MARSEILLE le Merlan Avenue prosper Merimee</a>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">16 Charente</h3>
-              <a href="">BOURGES Zac du Prado</a><br>
-              <a href="">SAINT-DOULCHARD rue des Creuzettes</a><br>
-              <a href="">VIERZON Av du 19 Mars 1962</a>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">18 Cher</h3>
-              <a href="">BOURGES Zac du Prado</a><br>
-              <a href="">SAINT-DOULCHARD rue des Creuzettes</a>
-            </div>
-          </div>
-
+        <div class="equip-card" data-reveal>
+          <div class="equip-icon"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+          <h3>Machines guidées</h3>
+          <p>Un parc de machines complet pour un travail ciblé et sécurisé, quel que soit votre niveau.</p>
         </div>
-
-        <div class="columns">
-
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">19 Corrèze</h3>
-              <a href="">BRIVE-LA-GAILLARDE Avenue Jean Charles Rivet</a>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">22 Côtes-d'Armor</h3>
-              <a href="">SAINT BRIEUC Saint-Brieuc Rue Saint Benoit</a>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box">
-              <h3 class="title is-4">24 Dordogne</h3>
-              <a href="">BERGERAC Route de Bordeaux</a>
-            </div>
-          </div>
-
+        <div class="equip-card" data-reveal>
+          <div class="equip-icon"><i class="fa fa-th" aria-hidden="true"></i></div>
+          <h3>Cages d'entraînement</h3>
+          <p>Des rigs pensés pour le squat, le développé et les mouvements fonctionnels en toute sécurité.</p>
         </div>
-
+        <div class="equip-card" data-reveal>
+          <div class="equip-icon"><i class="fa fa-heartbeat" aria-hidden="true"></i></div>
+          <h3>Zone cardio</h3>
+          <p>Tapis, vélos et rameurs pour développer votre endurance et brûler des calories.</p>
+        </div>
+        <div class="equip-card" data-reveal>
+          <div class="equip-icon"><i class="fa fa-fire" aria-hidden="true"></i></div>
+          <h3>Cross-training</h3>
+          <p>Un espace fonctionnel pour des entraînements intenses et variés, en solo ou en groupe.</p>
+        </div>
+        <div class="equip-card" data-reveal>
+          <div class="equip-icon"><i class="fa fa-leaf" aria-hidden="true"></i></div>
+          <h3>Renforcement &amp; mobilité</h3>
+          <p>Étirements, gainage et travail de mobilité pour progresser durablement et sans blessure.</p>
         </div>
       </div>
-    </section>
-    <!-- section les salles -->
 
-    
-  </body>
+      <div class="gallery-strip">
+        <div class="toned-photo" data-reveal><img src="images/fitness2.jpg" alt="Zone cardio de la salle ASGAARD à Aubusson" loading="lazy"></div>
+        <div class="toned-photo" data-reveal><img src="images/fitness4.jpg" alt="Plateau de machines guidées chez ASGAARD" loading="lazy"></div>
+        <div class="toned-photo" data-reveal><img src="images/fitness3.jpg" alt="Communauté sportive ASGAARD, tous niveaux" loading="lazy"></div>
+        <div class="toned-photo" data-reveal><img src="images/main.jpg" alt="Entraînement en poids libres chez ASGAARD" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= BANDE CITATION ============================= -->
+  <div class="quote-band">
+    <div class="quote-band-media">
+      <img src="images/fitness4.jpg" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <div class="quote-band-content">
+      <p class="kicker">L'esprit ASGAARD</p>
+      <h2>« Chez ASGAARD, chaque séance te rapproche du sommet. »</h2>
+    </div>
+  </div>
+
+  <!-- ============================= ABONNEMENTS ============================= -->
+  <section class="section" id="abonnements">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <p class="eyebrow" style="justify-content:center">Nos abonnements</p>
+        <h2 class="section-title">Des tarifs <span class="hl">simples et transparents</span></h2>
+        <p class="section-lede">Trois formules pour s'entraîner chez ASGAARD, à Aubusson : un abonnement mensuel, un pass à la journée et une formule à deux. Sans mauvaise surprise.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- PASS DAY -->
+        <article class="price-card" id="pass-day" data-reveal>
+          <p class="price-name">Pass Day</p>
+          <div class="price-value">
+            <span class="amount">9,99</span><span class="currency">€</span>
+          </div>
+          <p class="price-sub">Achat ponctuel — à la journée</p>
+          <ul class="price-features">
+            <li><i class="fa fa-check" aria-hidden="true"></i>Accès complet à la salle pour 1 journée</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Idéal pour tester ASGAARD</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Parfait si vous êtes de passage à Aubusson</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Aucun engagement</li>
+          </ul>
+          <button class="btn btn-outline btn-block" data-open-modal data-plan="passday" data-plan-name="Pass Day" data-plan-price="9,99 €" data-plan-period="/ jour">Acheter</button>
+        </article>
+
+        <!-- MENSUEL (recommandé) -->
+        <article class="price-card is-featured" id="mensuel" data-reveal>
+          <span class="price-badge">★ Formule recommandée</span>
+          <p class="price-name">Abonnement Mensuel</p>
+          <div class="price-value">
+            <span class="amount">24,99</span><span class="currency">€</span><span class="period">/ mois</span>
+          </div>
+          <p class="price-sub">L'offre standard ASGAARD</p>
+          <ul class="price-features">
+            <li><i class="fa fa-check" aria-hidden="true"></i>Accès illimité à la salle</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Tous les équipements inclus</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Musculation, cardio, cross-training</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Abonnement mensuel, flexible</li>
+          </ul>
+          <button class="btn btn-primary btn-block" data-open-modal data-plan="mensuel" data-plan-name="Abonnement Mensuel" data-plan-price="24,99 €" data-plan-period="/ mois">S'abonner</button>
+        </article>
+
+        <!-- DUO -->
+        <article class="price-card" id="duo" data-reveal>
+          <p class="price-name">Duo</p>
+          <div class="price-value">
+            <span class="amount">45</span><span class="currency">€</span><span class="period">/ mois</span>
+          </div>
+          <p class="price-sub">Pour 2 personnes</p>
+          <ul class="price-features">
+            <li><i class="fa fa-check" aria-hidden="true"></i>Accès illimité pour 2 personnes</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Idéal entre amis, en couple ou en famille</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Tous les équipements inclus</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Formule économique à deux</li>
+          </ul>
+          <button class="btn btn-wood btn-block" data-open-modal data-plan="duo" data-plan-name="Abonnement Duo" data-plan-price="45 €" data-plan-period="/ mois — 2 pers.">Choisir cette offre</button>
+        </article>
+
+      </div>
+
+      <div class="pricing-footnote">
+        <p><i class="fa fa-lock" aria-hidden="true"></i>Paiement en ligne sécurisé bientôt disponible. En attendant, envoyez votre demande et notre équipe vous recontacte pour finaliser votre inscription.</p>
+        <button type="button" class="link-underline" id="open-account" style="background:none;border:none;">Gérer mon abonnement →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= A PROPOS ============================= -->
+  <section class="section section-alt" id="a-propos">
+    <div class="container about-grid">
+      <div class="toned-photo about-photo" data-reveal>
+        <img src="images/fitness2.jpg" alt="Communauté ASGAARD s'entraînant ensemble à Aubusson" loading="lazy">
+      </div>
+      <div data-reveal>
+        <p class="eyebrow">À propos</p>
+        <h2 class="section-title">L'esprit <span class="hl">ASGAARD</span></h2>
+        <p class="section-lede">Inspirée par la force et la discipline des légendes nordiques, ASGAARD est bien plus qu'une salle de sport : c'est un clan. Ici, chacun progresse à son rythme, dans une ambiance exigeante mais bienveillante, entre bois brut, structures métalliques et esprit d'équipe.</p>
+
+        <div class="about-values">
+          <div class="value-item">
+            <h4>Force</h4>
+            <p>Un plateau complet pour progresser en musculation, semaine après semaine.</p>
+          </div>
+          <div class="value-item">
+            <h4>Communauté</h4>
+            <p>Un lieu où l'on se motive les uns les autres, du débutant au sportif confirmé.</p>
+          </div>
+          <div class="value-item">
+            <h4>Accessibilité</h4>
+            <p>Ouvert à tous, dès 16 ans, quel que soit votre niveau de départ.</p>
+          </div>
+          <div class="value-item">
+            <h4>Exigence</h4>
+            <p>Un cadre premium, pensé dans le moindre détail, pour un entraînement sérieux.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= LOCALISATION ============================= -->
+  <section class="section" id="localisation">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <p class="eyebrow" style="justify-content:center">Localisation</p>
+        <h2 class="section-title">Retrouvez-nous à <span class="hl">Aubusson</span></h2>
+        <p class="section-lede">ASGAARD, votre salle de sport et de musculation en Creuse, à Aubusson (23200).</p>
+      </div>
+
+      <div class="locate-grid">
+        <div class="locate-card" data-reveal>
+          <div class="locate-item">
+            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Adresse</h4>
+              <p>ASGAARD Fitness<br>Aubusson, 23200 — Creuse<br><span class="info-note">Adresse précise à confirmer</span></p>
+            </div>
+          </div>
+          <div class="locate-item">
+            <i class="fa fa-clock" aria-hidden="true"></i>
+            <div>
+              <h4>Horaires</h4>
+              <p>Lun – Ven : 6h00 – 22h00<br>Sam – Dim : 8h00 – 20h00<br><span class="info-note">Horaires indicatifs — à confirmer</span></p>
+            </div>
+          </div>
+          <div class="locate-item">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <div>
+              <h4>Téléphone</h4>
+              <p>05 XX XX XX XX <span class="info-note">(à personnaliser)</span></p>
+            </div>
+          </div>
+          <div class="locate-item">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <div>
+              <h4>Email</h4>
+              <p>contact@asgaard-aubusson.fr</p>
+            </div>
+          </div>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Aubusson%2C+Creuse" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:12px;">Itinéraire</a>
+        </div>
+
+        <div class="map-frame" data-reveal>
+          <iframe src="https://www.google.com/maps?q=Aubusson,Creuse&output=embed" title="Localisation d'ASGAARD à Aubusson, Creuse" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FAQ ============================= -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <p class="eyebrow" style="justify-content:center">FAQ</p>
+        <h2 class="section-title">Questions <span class="hl">fréquentes</span></h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" aria-expanded="false">À partir de quel âge peut-on s'inscrire chez ASGAARD ?<i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-a"><p class="faq-a-inner">ASGAARD est accessible dès 16 ans. Une autorisation parentale peut être demandée pour les mineurs, contactez-nous pour connaître les modalités précises.</p></div>
+        </div>
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" aria-expanded="false">L'abonnement mensuel implique-t-il un engagement long ?<i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-a"><p class="faq-a-inner">Notre abonnement mensuel à 24,99€ est pensé comme une formule simple et flexible. Contactez-nous pour connaître les conditions détaillées de résiliation.</p></div>
+        </div>
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" aria-expanded="false">Comment fonctionne le Pass Day ?<i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-a"><p class="faq-a-inner">Le Pass Day à 9,99€ vous donne accès à toute la salle pendant une journée, sans engagement. Idéal si vous êtes de passage à Aubusson ou souhaitez tester ASGAARD avant de vous abonner.</p></div>
+        </div>
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" aria-expanded="false">L'abonnement Duo, comment ça marche ?<i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-a"><p class="faq-a-inner">Pour 45€/mois, deux personnes profitent d'un accès illimité à la salle. Idéal entre amis, en couple ou en famille.</p></div>
+        </div>
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" aria-expanded="false">Le paiement en ligne est-il disponible ?<i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-a"><p class="faq-a-inner">Le paiement en ligne sécurisé arrive bientôt. En attendant, vous pouvez envoyer une demande d'inscription depuis le site : notre équipe vous recontacte rapidement pour finaliser votre abonnement.</p></div>
+        </div>
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" aria-expanded="false">Puis-je gérer mon abonnement en ligne ?<i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-a"><p class="faq-a-inner">Un espace membre pour gérer votre abonnement en ligne est en préparation. Contactez-nous directement pour toute question sur votre abonnement.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= CONTACT ============================= -->
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+      <div data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Une question ? <span class="hl">Écrivez-nous</span></h2>
+        <p class="section-lede">Une question sur nos abonnements, nos horaires ou nos équipements ? Notre équipe vous répond rapidement.</p>
+
+        <form class="contact-form" id="contact-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="c-firstname">Prénom</label>
+              <input type="text" id="c-firstname" name="firstname" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="c-lastname">Nom</label>
+              <input type="text" id="c-lastname" name="lastname" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
+        </form>
+      </div>
+
+      <div class="contact-side" data-reveal>
+        <div class="locate-card">
+          <div class="locate-item">
+            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+            <div><h4>Adresse</h4><p>Aubusson, 23200 — Creuse</p></div>
+          </div>
+          <div class="locate-item">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <div><h4>Téléphone</h4><p>05 XX XX XX XX</p></div>
+          </div>
+          <div class="locate-item">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <div><h4>Email</h4><p>contact@asgaard-aubusson.fr</p></div>
+          </div>
+          <div class="social-row">
+            <a href="#" aria-label="ASGAARD sur Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="ASGAARD sur Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="ASGAARD sur TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#accueil" class="brand">
+            <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <path d="M24 2 L44 14 V34 L24 46 L4 34 V14 Z" stroke="#2f8dff" stroke-width="2.5"/>
+              <path d="M24 12 L24 46 M14 20 L34 32 M34 20 L14 32" stroke="#f6f4f1" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <strong>ASGAARD</strong><span class="dot">.</span>
+          </a>
+          <p>Salle de sport et musculation premium à Aubusson, en Creuse. Fitness, cardio, cross-training et renforcement musculaire pour tous les niveaux, dès 16 ans.</p>
+          <div class="social-row">
+            <a href="#" aria-label="ASGAARD sur Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="ASGAARD sur Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="ASGAARD sur TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Le club</h4>
+          <ul>
+            <li><a href="#la-salle">La salle</a></li>
+            <li><a href="#equipements">Nos équipements</a></li>
+            <li><a href="#a-propos">À propos</a></li>
+            <li><a href="#localisation">Aubusson</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tarifs</h4>
+          <ul>
+            <li><a href="#mensuel">Abonnement mensuel — 24,99€</a></li>
+            <li><a href="#pass-day">Pass Day — 9,99€</a></li>
+            <li><a href="#duo">Duo — 45€</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" id="footer-account">Gérer mon abonnement</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">CGV</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> ASGAARD — Salle de sport à Aubusson, Creuse. Tous droits réservés.</p>
+        <p>Fait avec force à Aubusson (23)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================= MOBILE STICKY CTA ============================= -->
+  <div class="mobile-cta-bar">
+    <a href="#abonnements" class="btn btn-outline btn-sm">Tarifs</a>
+    <a href="#" class="btn btn-primary btn-sm" data-open-modal data-plan="mensuel" data-plan-name="Abonnement Mensuel" data-plan-price="24,99 €" data-plan-period="/ mois">S'abonner</a>
+  </div>
+
+  <!-- ============================= MODAL ABONNEMENT ============================= -->
+  <div class="modal-overlay" id="modal-subscribe" role="dialog" aria-modal="true" aria-labelledby="modal-subscribe-title">
+    <div class="modal">
+      <div id="modal-subscribe-body">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow" id="modal-plan-name">Abonnement</p>
+            <h3 id="modal-subscribe-title">Finaliser ma demande</h3>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Fermer"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+        <p class="modal-plan-price" id="modal-plan-price">24,99 € / mois</p>
+
+        <form id="subscribe-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="s-firstname">Prénom</label>
+              <input type="text" id="s-firstname" name="firstname" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="s-lastname">Nom</label>
+              <input type="text" id="s-lastname" name="lastname" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="field" style="margin-top:14px;">
+            <label for="s-email">Email</label>
+            <input type="email" id="s-email" name="email" required autocomplete="email">
+          </div>
+          <div class="field" style="margin-top:14px;">
+            <label for="s-phone">Téléphone</label>
+            <input type="tel" id="s-phone" name="phone" required autocomplete="tel">
+          </div>
+          <div class="field" id="duo-partner-field" style="margin-top:14px; display:none;">
+            <label for="s-partner">Nom du second membre (Duo)</label>
+            <input type="text" id="s-partner" name="partner">
+          </div>
+
+          <div class="modal-note">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <span>Le paiement en ligne sécurisé (carte bancaire, prélèvement mensuel) sera bientôt disponible ici. En attendant, envoyez votre demande : notre équipe vous recontacte pour confirmer votre inscription.</span>
+          </div>
+          <div class="pay-icons" aria-hidden="true">
+            <i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fa fa-lock"></i>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:24px;">Envoyer ma demande</button>
+        </form>
+      </div>
+
+      <div class="modal-success" id="modal-success" hidden>
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <h3>Demande envoyée !</h3>
+        <p>Merci <strong><span id="success-name"></span></strong>, votre demande pour la formule <strong><span id="success-plan"></span></strong> a bien été enregistrée. Notre équipe ASGAARD vous recontacte rapidement pour finaliser votre inscription.</p>
+        <button type="button" class="btn btn-outline" data-close-modal style="margin-top:24px;">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================= MODAL ESPACE MEMBRE ============================= -->
+  <div class="modal-overlay" id="modal-account" role="dialog" aria-modal="true" aria-labelledby="modal-account-title">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <p class="eyebrow">Espace membre</p>
+          <h3 id="modal-account-title">Gérer mon abonnement</h3>
+        </div>
+        <button class="modal-close" type="button" data-close-modal aria-label="Fermer"><i class="fa fa-times" aria-hidden="true"></i></button>
+      </div>
+      <p class="section-lede" style="margin-top:16px;">L'espace membre en ligne (suivi d'abonnement, historique, moyens de paiement) est en cours de développement.</p>
+      <div class="modal-note">
+        <i class="fa fa-headset" aria-hidden="true"></i>
+        <span>Pour toute question sur votre abonnement ASGAARD, contactez directement notre équipe par téléphone ou par email.</span>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-block" data-close-modal style="margin-top:20px;">Contacter l'équipe ASGAARD</a>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>
