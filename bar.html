@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
+<title>Le bar Asgaard — Comptoir intégré à la salle | Aubusson</title>
+<meta name="description" content="Le Domaine d'Asgaard accueille son propre comptoir : milkshakes maison, frappés et boissons protéinées, directement dans la salle à Aubusson (Creuse).">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Le Domaine d'Asgaard">
+<meta property="og:title" content="Le bar Asgaard — Comptoir intégré à la salle | Aubusson">
+<meta property="og:description" content="Le Domaine d'Asgaard accueille son propre comptoir : milkshakes maison, frappés et boissons protéinées, directement dans la salle à Aubusson (Creuse).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="site-nav">
+  <div class="wrap site-nav-inner">
+    <a href="index.html" class="hero-mark">Le Domaine d'Asgaard</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle-btn" aria-label="Ouvrir le menu"><span></span></label>
+    <nav class="site-nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="histoire.html">Notre histoire</a>
+      <a href="bar.html" class="is-active">Le bar</a>
+      <a href="abonnements.html">Abonnements</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</div>
+<div class="page-header">
+  <div class="wrap">
+    <div class="rune-divider"></div>
+    <h1>Le bar.</h1>
+  </div>
+</div>
+<div class="bar-strip">
+  <div class="wrap">
+    <div>
+      <h2>Le comptoir<br>Asgaard.</h2>
+      <p>Parce qu'une salle peut être autre chose qu'un endroit où l'on pose son sac, s'entraîne et repart. Le Domaine d'Asgaard accueillera son propre comptoir, directement dans la salle : un lieu pour prendre quelques minutes après une séance, échanger et découvrir des recettes préparées sur place. Des produits frais, une carte appelée à évoluer au fil des saisons.</p>
+      <div class="bar-tags">
+        <span>Milkshakes maison</span>
+        <span>Frappés</span>
+        <span>Boissons protéinées</span>
+      </div>
+    </div>
+    <div class="shake-widget">
+      <svg viewBox="0 0 220 300" width="200" height="272" aria-hidden="true">
+        <defs>
+          <clipPath id="cupClip">
+            <path d="M56,96 L164,96 L150,244 Q110,258 70,244 Z"/>
+          </clipPath>
+          <linearGradient id="coffeeGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#8a5a34"/>
+            <stop offset="100%" stop-color="#3c2415"/>
+          </linearGradient>
+        </defs>
+
+        <!-- steam, rises continuously above the cup -->
+        <g stroke="#efe7d8" stroke-width="4" stroke-linecap="round" fill="none">
+          <path class="steam steam-1" d="M92,86 Q100,66 92,50 Q84,34 92,18"/>
+          <path class="steam steam-2" d="M112,86 Q120,66 112,48 Q104,32 112,14"/>
+          <path class="steam steam-3" d="M132,86 Q140,68 132,52 Q124,36 132,20"/>
+        </g>
+
+        <!-- coffee fill, clipped to cup shape, animated vertically -->
+        <g clip-path="url(#cupClip)">
+          <rect class="shake-liquid" x="50" y="0" width="130" height="270" fill="url(#coffeeGradient)"/>
+          <ellipse class="shake-foam" cx="110" cy="0" rx="58" ry="7" fill="#c89a6a" opacity="0.8"/>
+        </g>
+
+        <!-- cup outline -->
+        <path d="M56,96 L164,96 L150,244 Q110,258 70,244 Z" fill="none" stroke="#efe7d8" stroke-width="4" stroke-linejoin="round"/>
+
+        <!-- rim ellipse -->
+        <ellipse cx="110" cy="96" rx="54" ry="8" fill="none" stroke="#efe7d8" stroke-width="4"/>
+
+        <!-- handle -->
+        <path d="M163,120 q36,2 36,38 q0,36 -36,38" fill="none" stroke="#efe7d8" stroke-width="9" stroke-linecap="round"/>
+
+        <!-- saucer -->
+        <ellipse cx="110" cy="262" rx="72" ry="9" fill="none" stroke="#efe7d8" stroke-width="4"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-mark">Le Domaine d'Asgaard</div>
+    <div class="foot-meta">Aubusson, Creuse · 06 64 65 43 93 · killianschramm@gmail.com</div>
+  </div>
+</footer>
+</body>
+</html>
