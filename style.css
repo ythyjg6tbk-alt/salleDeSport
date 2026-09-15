@@ -868,6 +868,79 @@
   font-size: clamp(34px, 5vw, 52px);
 }
 
+.page-header p {
+  margin-top: 14px;
+  color: var(--stone-500);
+  max-width: 56ch;
+  font-size: 18px;
+}
+
+/* ---------- INTRO TEXT (pages secondaires) ---------- */
+
+.intro-text {
+  padding: 12px 0 20px;
+}
+
+.intro-text .wrap {
+  max-width: 760px;
+  margin: 0;
+}
+
+.intro-text p + p {
+  margin-top: 14px;
+}
+
+/* ---------- LISTES SIMPLES (menu du bar / valeurs) ---------- */
+
+.simple-list-item {
+  padding: 26px 0;
+  border-top: 1px solid var(--stone-300);
+}
+
+.simple-list-item:last-child {
+  border-bottom: 1px solid var(--stone-300);
+}
+
+.simple-list-item h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.simple-list-item p {
+  color: var(--stone-500);
+  max-width: 60ch;
+}
+
+.valeurs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 48px;
+}
+
+/* ---------- BRAND MOTTO (bandeau commun à toutes les pages) ---------- */
+
+.brand-motto {
+  background: var(--iron-900);
+  color: var(--bone-100);
+  padding: 56px 0;
+  text-align: center;
+}
+
+.brand-motto p {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(19px, 2.6vw, 26px);
+}
+
+sup {
+  font-size: 0.65em;
+}
+
+@media (max-width: 760px) {
+  .valeurs-grid { grid-template-columns: 1fr; }
+}
+
 .section-head h1 {
   font-size: clamp(30px, 4vw, 42px);
 }
