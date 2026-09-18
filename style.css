@@ -972,21 +972,6 @@ sup {
 
 /* ---------- DOCUMENT LEGAL (CGV / mentions légales) ---------- */
 
-.legal-notice {
-  max-width: 760px;
-  margin: 0 auto 48px;
-  background: rgba(184, 137, 74, 0.12);
-  border: 1px solid var(--gold-400);
-  border-radius: 4px;
-  padding: 20px 24px;
-  font-size: 14px;
-  color: var(--iron-900);
-}
-
-.legal-notice strong {
-  color: var(--ember-500);
-}
-
 .legal-doc {
   max-width: 760px;
   margin: 0 auto;
@@ -1018,9 +1003,4 @@ sup {
 
 .legal-doc strong {
   color: var(--iron-900);
-}
-
-.todo {
-  color: var(--ember-500);
-  font-weight: 600;
 }
