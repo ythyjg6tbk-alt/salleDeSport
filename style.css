@@ -969,3 +969,58 @@ sup {
 .section-head h1 {
   font-size: clamp(30px, 4vw, 42px);
 }
+
+/* ---------- DOCUMENT LEGAL (CGV / mentions légales) ---------- */
+
+.legal-notice {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  background: rgba(184, 137, 74, 0.12);
+  border: 1px solid var(--gold-400);
+  border-radius: 4px;
+  padding: 20px 24px;
+  font-size: 14px;
+  color: var(--iron-900);
+}
+
+.legal-notice strong {
+  color: var(--ember-500);
+}
+
+.legal-doc {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal-doc h2 {
+  font-size: 21px;
+  margin: 44px 0 14px;
+}
+
+.legal-doc h2:first-child {
+  margin-top: 0;
+}
+
+.legal-doc p {
+  color: var(--stone-500);
+  margin-bottom: 12px;
+}
+
+.legal-doc ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.legal-doc li {
+  color: var(--stone-500);
+  margin-bottom: 8px;
+}
+
+.legal-doc strong {
+  color: var(--iron-900);
+}
+
+.todo {
+  color: var(--ember-500);
+  font-weight: 600;
+}
