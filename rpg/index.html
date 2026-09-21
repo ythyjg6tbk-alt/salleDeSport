@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Les 5 Gardiens - RPG Fantastique</title>
+<meta name="description" content="RPG fantastique tour par tour à jouer à 5 sur mobile : Samurai Sanglier, Prêtresse Biche, Renard Ninja, Loutre Mage et Dragon Barde.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#140f1f">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ===================== ECRAN TITRE ===================== -->
+  <section id="screen-title" class="screen active">
+    <div class="title-banner">
+      <img src="images/heroes.jpg" alt="Les 5 Gardiens">
+      <div class="title-fade"></div>
+    </div>
+    <div class="title-content">
+      <h1>Les 5 Gardiens</h1>
+      <p class="subtitle">Un RPG fantastique tour par tour — à jouer à 5 sur un seul mobile</p>
+      <button class="btn btn-primary btn-big" id="btn-goto-setup">Nouvelle Aventure</button>
+      <button class="btn btn-ghost" id="btn-how-to-play">Comment jouer ?</button>
+      <p class="best-wave" id="best-wave-label"></p>
+    </div>
+  </section>
+
+  <!-- ===================== ECRAN REGLES ===================== -->
+  <section id="screen-rules" class="screen">
+    <div class="panel scrollable">
+      <h2>Comment jouer à 5 ?</h2>
+      <p>Chaque joueur incarne un héros unique avec ses propres compétences. Vous partagez le même téléphone : quand c'est votre tour, l'appareil vous est passé.</p>
+      <ul>
+        <li><b>🐗 Samurai Sanglier</b> — Tank / guerrier : encaisse les coups, provoque l'ennemi et frappe fort.</li>
+        <li><b>🦌 Prêtresse Biche</b> — Soigneuse : maintient le groupe en vie et purifie les malédictions.</li>
+        <li><b>🦊 Renard Ninja</b> — Assassin : frappes rapides et critiques, poison et esquive.</li>
+        <li><b>🦦 Loutre Mage</b> — Élémentaliste : dégâts de zone, gel et boucliers d'eau.</li>
+        <li><b>🐉 Dragon Barde</b> — Soutien : chants qui renforcent l'équipe et envoûtent les ennemis.</li>
+      </ul>
+      <p>Survivez à des vagues de monstres. Toutes les 5 vagues, un boss apparaît. Le groupe entier tombé = partie terminée.</p>
+      <button class="btn btn-primary" id="btn-close-rules">C'est compris !</button>
+    </div>
+  </section>
+
+  <!-- ===================== ECRAN PREPARATION ===================== -->
+  <section id="screen-setup" class="screen">
+    <div class="panel scrollable">
+      <h2>Préparation du groupe</h2>
+      <p class="hint">5 joueurs, 5 héros. Personnalisez vos noms puis lancez l'aventure.</p>
+      <div id="setup-list" class="setup-list"></div>
+      <button class="btn btn-primary btn-big" id="btn-start-battle">Commencer l'aventure</button>
+      <button class="btn btn-ghost" id="btn-back-title">Retour</button>
+    </div>
+  </section>
+
+  <!-- ===================== ECRAN PASSE L'APPAREIL ===================== -->
+  <section id="screen-pass" class="screen">
+    <div class="pass-content">
+      <div class="pass-icon" id="pass-icon">🐗</div>
+      <h2 id="pass-title">Passe l'appareil à</h2>
+      <p class="pass-player" id="pass-player">Joueur 1</p>
+      <p class="pass-hero" id="pass-hero">Samurai Sanglier</p>
+      <button class="btn btn-primary btn-big" id="btn-pass-ready">Je suis prêt(e)</button>
+    </div>
+  </section>
+
+  <!-- ===================== ECRAN COMBAT ===================== -->
+  <section id="screen-battle" class="screen">
+    <div class="battle-header">
+      <span id="wave-label">Vague 1</span>
+      <span id="turn-label">—</span>
+    </div>
+
+    <div id="enemies-row" class="entities-row"></div>
+
+    <div id="battle-log" class="battle-log"></div>
+
+    <div id="heroes-row" class="entities-row"></div>
+
+    <div id="action-panel" class="action-panel"></div>
+  </section>
+
+  <!-- ===================== ECRAN FIN ===================== -->
+  <section id="screen-end" class="screen">
+    <div class="end-content">
+      <h1 id="end-title">Victoire !</h1>
+      <p id="end-text">Le groupe a triomphé.</p>
+      <p id="end-wave" class="end-wave"></p>
+      <button class="btn btn-primary btn-big" id="btn-restart">Nouvelle Aventure</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>

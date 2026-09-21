@@ -1,0 +1,11 @@
+{
+  "name": "Les 5 Gardiens - RPG Fantastique",
+  "short_name": "Les 5 Gardiens",
+  "description": "RPG fantastique tour par tour à jouer à 5 sur mobile",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#140f1f",
+  "theme_color": "#140f1f",
+  "orientation": "portrait",
+  "icons": []
+}
