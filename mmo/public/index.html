@@ -2,11 +2,12 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Les 5 Gardiens - MMO</title>
-<meta name="description" content="MMORPG léger à 5 joueurs : monde, quêtes, villages, niveaux 1-20 et équipement.">
+<title>Les 5 Gardiens - MMO 3D</title>
+<meta name="description" content="MMORPG léger en 3D à 5 joueurs : monde, quêtes, villages, niveaux 1-20 et équipement.">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#140f1f">
+<meta name="theme-color" content="#0b1a12">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Zen+Maru+Gothic:wght@400;700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
   <section id="screen-login" class="screen active">
     <div class="login-box">
       <h1>Les 5 Gardiens</h1>
-      <p class="subtitle">MMO léger — jusqu'à 5 joueurs, un monde partagé</p>
+      <p class="subtitle">MMO 3D léger — jusqu'à 5 joueurs, un monde partagé</p>
       <input type="text" id="input-name" maxlength="16" placeholder="Ton nom de héros">
       <p class="hint">Choisis ta classe (fixe, pas de personnalisation esthétique) :</p>
       <div id="class-grid" class="class-grid"></div>
@@ -26,8 +27,11 @@
     </div>
   </section>
 
-  <!-- ===================== ECRAN JEU ===================== -->
+  <!-- ===================== ECRAN JEU (3D) ===================== -->
   <section id="screen-game" class="screen">
+    <div id="canvas-wrap"></div>
+    <div id="labels-layer"></div>
+
     <div class="hud">
       <div class="hud-left">
         <span id="hud-emoji">🐗</span>
@@ -45,8 +49,6 @@
     </div>
 
     <div id="zone-name" class="zone-name">—</div>
-
-    <div id="viewport" class="viewport"></div>
 
     <div id="combat-log" class="combat-log"></div>
 
@@ -87,9 +89,13 @@
     </div>
   </div>
 
+  <div id="fallback" class="hidden">Le rendu 3D n'a pas pu se charger sur cet appareil.<br>Essaie de recharger la page.</div>
+
 </div>
 
 <script src="/socket.io/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="models.js"></script>
 <script src="client.js"></script>
 </body>
 </html>

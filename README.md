@@ -14,7 +14,7 @@ Un mini-RPG tour par tour, jouable en local à 5 sur un seul mobile (mode "passe
 
 ## 🌍 Les 5 Gardiens — MMO (`mmo/`)
 
-Version en ligne, en temps réel, pour 5 joueurs connectés simultanément depuis leurs propres téléphones : un monde partagé avec 3 villages, des zones sauvages, des quêtes qui font progresser du niveau 1 au niveau 20, et de l'équipement (casque/plastron/jambières/bottes) — aucune personnalisation esthétique, chaque classe garde son sprite fixe.
+Version en ligne, en temps réel, pour 5 joueurs connectés simultanément depuis leurs propres téléphones : un monde partagé en **3D** (caméra 3e personne, style low-poly cel-shadé original) avec 3 villages, 3 zones sauvages, des quêtes qui font progresser du niveau 1 au niveau 20, et de l'équipement (casque/plastron/jambières/bottes) — aucune personnalisation esthétique, chaque classe garde son modèle fixe. Tous les modèles 3D (héros, monstres, PNJ, décor) sont générés par code, sans aucune ressource externe copiée.
 
 Contrairement à `rpg/`, cette version a besoin d'un serveur qui tourne en continu (déplacements et combats synchronisés en temps réel entre joueurs). Elle ne peut donc pas être hébergée sur GitHub Pages.
 
