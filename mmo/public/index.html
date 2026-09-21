@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Les 5 Gardiens - MMO</title>
+<meta name="description" content="MMORPG léger à 5 joueurs : monde, quêtes, villages, niveaux 1-20 et équipement.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#140f1f">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ===================== ECRAN CONNEXION ===================== -->
+  <section id="screen-login" class="screen active">
+    <div class="login-box">
+      <h1>Les 5 Gardiens</h1>
+      <p class="subtitle">MMO léger — jusqu'à 5 joueurs, un monde partagé</p>
+      <input type="text" id="input-name" maxlength="16" placeholder="Ton nom de héros">
+      <p class="hint">Choisis ta classe (fixe, pas de personnalisation esthétique) :</p>
+      <div id="class-grid" class="class-grid"></div>
+      <button class="btn btn-primary btn-big" id="btn-login">Entrer dans le monde</button>
+      <p class="error" id="login-error"></p>
+    </div>
+  </section>
+
+  <!-- ===================== ECRAN JEU ===================== -->
+  <section id="screen-game" class="screen">
+    <div class="hud">
+      <div class="hud-left">
+        <span id="hud-emoji">🐗</span>
+        <div class="hud-bars">
+          <div class="hud-name" id="hud-name">—</div>
+          <div class="bar-bg small"><div class="bar-fill hp" id="hud-hp"></div></div>
+          <div class="bar-bg small"><div class="bar-fill mp" id="hud-mp"></div></div>
+          <div class="bar-bg small"><div class="bar-fill xp" id="hud-xp"></div></div>
+        </div>
+      </div>
+      <div class="hud-right">
+        <span id="hud-level">Niv. 1</span>
+        <span id="hud-gold">💰 0</span>
+      </div>
+    </div>
+
+    <div id="zone-name" class="zone-name">—</div>
+
+    <div id="viewport" class="viewport"></div>
+
+    <div id="combat-log" class="combat-log"></div>
+
+    <div class="controls">
+      <div id="joystick-base" class="joystick-base">
+        <div id="joystick-knob" class="joystick-knob"></div>
+      </div>
+      <div id="action-buttons" class="action-buttons">
+        <button class="btn-round" id="btn-bag">🎒</button>
+      </div>
+    </div>
+
+    <div id="battle-panel" class="battle-panel hidden">
+      <div class="battle-target" id="battle-target-name">—</div>
+      <div class="bar-bg"><div class="bar-fill hp" id="battle-target-hp"></div></div>
+      <div id="battle-abilities" class="battle-abilities"></div>
+      <button class="btn btn-ghost btn-small" id="btn-flee">Fuir le combat</button>
+    </div>
+  </section>
+
+  <!-- ===================== MODALE NPC ===================== -->
+  <div id="modal-npc" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="npc-title">—</h2>
+      <div id="npc-body"></div>
+      <button class="btn btn-ghost" id="btn-close-npc">Fermer</button>
+    </div>
+  </div>
+
+  <!-- ===================== MODALE SAC / EQUIPEMENT ===================== -->
+  <div id="modal-bag" class="modal hidden">
+    <div class="modal-content">
+      <h2>Équipement</h2>
+      <div id="equip-slots" class="equip-slots"></div>
+      <h3>Sac</h3>
+      <div id="inventory-list" class="inventory-list"></div>
+      <button class="btn btn-ghost" id="btn-close-bag">Fermer</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+</body>
+</html>
